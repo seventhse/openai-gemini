@@ -76,7 +76,7 @@ const makeHeaders = (apiKey, more) => ({
 });
 
 async function handleModels (apiKey) {
-  const response = await fetch(`${BASE_URL}/${API_VERSION}/models`, {
+  const response = await fetch(`${BASE_URL}/${API_VERSION}/models?key=${apiKey}`, {
     headers: makeHeaders(apiKey),
   });
   let { body } = response;
